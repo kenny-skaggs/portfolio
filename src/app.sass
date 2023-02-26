@@ -1,1 +1,63 @@
+$base-color: #091C2E
+$dark-other: #243647
+$bright-other: #184B7A
+$off-white: #339CFF
+
+$scheme-main: $base-color
+$text: $off-white
+$text-strong: $off-white
+$link-hover: $off-white
+$link-focus: $off-white
+
 @import ~bulma/bulma
+
+@font-face
+    font-family: MinecraftPixels
+    src: url(/public/Minecraft.ttf)
+
+
+body
+    background-color: $base-color
+    color: $off-white
+    font-family: 'Titillium Web', sans-serif
+
+nav
+    position: sticky !important
+    top: 0
+    background-color: rgba($base-color, 0.8) !important
+    backdrop-filter: blur(5px)
+
+p
+    margin-top: 1em
+    margin-bottom: 1em
+
+.navbar-item
+    color: $off-white !important
+
+    &:hover
+        background-color: lighten($base-color, 3%) !important
+
+    &.active
+        background-color: lighten($base-color, 5%) !important
+
+.binary-display
+    font-family: 'MinecraftPixels'
+    padding-right: 0.4em
+    padding-top: 0.4em
+    color: $bright-other
+
+    .my-title &
+        color: darken($bright-other, 8%)
+                                                
+
+.name
+    color: $dark-other
+
+.my-title
+    color: $bright-other
+    border-bottom: $dark-other solid 2px
+
+.my-section
+    min-height: 100vh
+    display: flex
+    align-items: center
