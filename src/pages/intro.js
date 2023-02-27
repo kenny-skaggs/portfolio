@@ -12,10 +12,18 @@ export default class extends Component {
                     Kenny Skaggs
                 </h1>
                 <h1 className='subtitle'>
-                    Telling some computers what to do since 1998
+                    Telling computers what to do since 1998
                 </h1>
                 <p>
-                    Libero id faucibus nisl tincidunt eget nullam non nisi est. In ante metus dictum at tempor commodo ullamcorper a. Maecenas volutpat blandit aliquam etiam erat velit scelerisque in dictum. Pharetra sit amet aliquam id diam maecenas ultricies mi. Sit amet purus gravida quis blandit turpis. Venenatis cras sed felis eget velit. Pellentesque elit ullamcorper dignissim cras tincidunt. Consectetur libero id faucibus nisl tincidunt eget nullam non. Magna ac placerat vestibulum lectus mauris ultrices. Orci ac auctor augue mauris augue. Cursus euismod quis viverra nibh. Commodo ullamcorper a lacus vestibulum sed. Eros donec ac odio tempor orci dapibus ultrices in.
+                    Passionate software engineer looking for a full-time or part-time position doing complex and
+                    challenging work for a great cause.
+                </p>
+                <p>
+                    I'm detail oriented and great at debugging. Most of my skillset is in full stack
+                    development, but I'm a quick learner and am open to other fields. My main focus isn't
+                    so much on the process or what technologies I'm using. What I care about the most is
+                    that the work I'm doing is helping people: medical researchers, students and teachers,
+                    or office workers supporting the backbones of society.
                 </p>
             </Section>
         )

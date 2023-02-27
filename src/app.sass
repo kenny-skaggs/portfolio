@@ -15,17 +15,54 @@ $link-focus: $off-white
     font-family: MinecraftPixels
     src: url(/public/Minecraft.ttf)
 
-
 body
     background-color: $base-color
     color: $off-white
     font-family: 'Titillium Web', sans-serif
 
+.container
+    padding-left: 10vw
+    padding-right: 10vw
+
+.icon-display
+    position: fixed
+    bottom: 0
+    left: 0
+    display: flex
+    flex-direction: column
+    padding-right: 0.5em
+    z-index: 10
+
+    .icon
+        font-size: 2em
+
+.link-icon
+    display: flex
+    align-items: center
+    width: fit-content
+
+    &:hover
+        cursor: pointer
+
+    .detail
+        position: relative
+        
 nav
     position: sticky !important
     top: 0
+
+.background-blur
     background-color: rgba($base-color, 0.8) !important
     backdrop-filter: blur(5px)
+
+.mask-display
+    position: fixed
+    top: 0
+    left: 0
+    bottom: 0
+    right: 0
+    background-color: rgba($base-color, 0.4) !important
+    backdrop-filter: blur(10px)
 
 p
     margin-top: 1em
@@ -61,3 +98,18 @@ p
     min-height: 100vh
     display: flex
     align-items: center
+
+.skill-container
+    display: flex
+    flex-wrap: wrap
+
+.skill-card
+    border: 1px solid $dark-other
+    border-radius: 5px
+    margin-right: 2em
+    margin-bottom: 2em
+    padding: 1em
+    background-color: $scheme-main
+
+    &:hover
+        cursor: pointer

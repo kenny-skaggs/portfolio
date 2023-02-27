@@ -21,10 +21,10 @@ export default class Navbar extends Component {
     }
 
     onScroll = (event) => {
-        if (this.isElementVisible('about')) {
+        if (this.isElementVisible('intro')) {
+            this.setState({activeSection: 'intro'});
+        } else if (this.isElementVisible('about')) {
             this.setState({activeSection: 'about'});
-        } else if (this.isElementVisible('skills')) {
-            this.setState({activeSection: 'skills'});
         } else if (this.isElementVisible('experience')) {
             this.setState({activeSection: 'experience'});
         } else if (this.isElementVisible('contact')) {
@@ -34,7 +34,7 @@ export default class Navbar extends Component {
 
     render() {
         return (
-            <nav className='navbar'>
+            <nav className='navbar background-blur'>
                 <div className='navbar-brand'>
                     <NavLink targetId='intro'>
                         ks
@@ -49,11 +49,11 @@ export default class Navbar extends Component {
 
                 <div id='navbarMenu' className='navbar-menu'>
                     <div className='navbar-end'>
-                        <NavLink targetId='about' active={this.state.activeSection == 'about'}>
-                            <span className='binary-display'>00</span> About
+                        <NavLink targetId='skills' active={ this.state.activeSection == 'intro' }>
+                            <span className='binary-display'>00</span> Intro
                         </NavLink>
-                        <NavLink targetId='skills' active={ this.state.activeSection == 'skills' }>
-                            <span className='binary-display'>01</span> Skills
+                        <NavLink targetId='about' active={this.state.activeSection == 'about'}>
+                            <span className='binary-display'>01</span> About
                         </NavLink>
                         <NavLink targetId='experience' active={ this.state.activeSection == 'experience' }>
                             <span className='binary-display'>10</span> Experience

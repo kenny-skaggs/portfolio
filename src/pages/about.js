@@ -11,7 +11,18 @@ export default class extends Component {
                 <Title>
                     <span className='binary-display'>00</span> A Little About Me
                 </Title>
-                <p>Sapien faucibus et molestie ac. Faucibus purus in massa tempor nec feugiat nisl pretium fusce. Vel quam elementum pulvinar etiam non. Facilisis gravida neque convallis a cras semper auctor. Tortor pretium viverra suspendisse potenti nullam ac tortor vitae purus. Et egestas quis ipsum suspendisse ultrices gravida dictum. Pulvinar mattis nunc sed blandit libero volutpat sed cras ornare. Tellus cras adipiscing enim eu turpis egestas pretium aenean pharetra. Fames ac turpis egestas sed tempus urna et pharetra. Nulla facilisi nullam vehicula ipsum a arcu. Tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+                <p>
+                    Loved playing games as a kid, but really wanted to know how they worked too (and not
+                    just because that helped me win). At about twelve years old, a neighbor-hood college
+                    student gave me his old Visual Basic 6 book. That's what kicked off a constant hunger
+                    to learn more about computers.
+                </p>
+                <p>
+                    Need a challange that results in a good utility for someone to use. Attack bugs with
+                    the same curiousity and a systematic approach to find why it's happening, as well
+                    as what kinds of processes can be put in place to prevent similar problems in the
+                    future.
+                </p>
             </Section>
         )
     }
