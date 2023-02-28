@@ -4,10 +4,14 @@ $bright-other: #184B7A
 $off-white: #339CFF
 
 $scheme-main: $base-color
+$scheme-invert: hsl(0, 0%, 4%)
+$shadow: 0 0.5em 1em -0.125em rgba($scheme-invert, 0.8), 0 0px 0 1px rgba($scheme-invert, 0.7)
 $text: $off-white
 $text-strong: $off-white
 $link-hover: $off-white
 $link-focus: $off-white
+$tag-background-color: $bright-other
+$tag-color: black
 
 @import ~bulma/bulma
 
@@ -113,3 +117,23 @@ p
 
     &:hover
         cursor: pointer
+
+.subsection
+    flex-grow: 1
+
+.experience-box
+    cursor: pointer
+
+    .details
+        overflow: hidden
+
+    &.active
+        transform: scaleX(1.03) !important
+
+.upwork-icon
+    background-image: url(/public/upwork.svg)
+    background-repeat: no-repeat
+    background-position: center
+    background-size: cover
+    width: 0.9em
+    height: 0.9em

@@ -48,15 +48,13 @@ export default class extends Component {
 
         return (
             <motion.div
-                className='link-icon'
+                className={`link-icon`}
                 onMouseEnter={this.onHoverStart}
                 onMouseLeave={this.onHoverEnd}
                 onClick={() => window.open(this.props.linkTarget)}
             >
                 <AnimatePresence>
-                    <span
-                        className='icon is-large'
-                    >
+                    <span className='icon is-large'>
                         <i className={this.props.iconSelector} />
                     </span>
                     {detailDisplay}

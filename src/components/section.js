@@ -13,6 +13,7 @@ export default class Section extends Component {
                         delay: 0.1,
                         duration: 0.5
                     }}
+                    className='subsection'
                 >
                     { this.props.children }
                 </motion.div>
