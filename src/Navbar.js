@@ -36,10 +36,6 @@ export default class Navbar extends Component {
         return (
             <nav className='navbar background-blur'>
                 <div className='navbar-brand'>
-                    <NavLink targetId='intro'>
-                        ks
-                    </NavLink>
-
                     <a className='navbar-burger' data-target="navbarMenu">
                         <span aria-hidden="true"></span>
                         <span aria-hidden="true"></span>

@@ -4,7 +4,6 @@ import BackgroundMask from './components/backgroundMask';
 import Navbar from './Navbar';
 import Intro from './pages/intro';
 import About from './pages/about';
-import Experience from './pages/experience';
 import Contact from './pages/contact';
 import IconDisplay from './components/iconDisplay';
 
@@ -28,7 +27,6 @@ export default class App extends Component {
                 <div className='container'>
                     <Intro />
                     <About />
-                    <Experience />
                     <Contact />
                 </div>
                 <IconDisplay onHoverChanged={this.onHoverChanged}/>
