@@ -7,7 +7,8 @@ export default class Navbar extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            activeSection: 'intro'
+            activeSection: 'intro',
+            showNav: false
         };
 
         window.addEventListener('scroll', this.onScroll);
@@ -25,8 +26,6 @@ export default class Navbar extends Component {
             this.setState({activeSection: 'intro'});
         } else if (this.isElementVisible('about')) {
             this.setState({activeSection: 'about'});
-        } else if (this.isElementVisible('experience')) {
-            this.setState({activeSection: 'experience'});
         } else if (this.isElementVisible('contact')) {
             this.setState({activeSection: 'contact'});
         }
@@ -36,26 +35,27 @@ export default class Navbar extends Component {
         return (
             <nav className='navbar background-blur'>
                 <div className='navbar-brand'>
-                    <a className='navbar-burger' data-target="navbarMenu">
+                    <a 
+                        role='button' 
+                        className={`navbar-burger ${ this.state.showNav ? 'is-active' : '' }`}
+                        onClick={() => this.setState({ showNav: !this.state.showNav })}
+                    >
                         <span aria-hidden="true"></span>
                         <span aria-hidden="true"></span>
                         <span aria-hidden="true"></span>
                     </a>
                 </div>
 
-                <div id='navbarMenu' className='navbar-menu'>
+                <div id='navbarMenu' className={`navbar-menu ${ this.state.showNav ? 'is-active' : '' }`}>
                     <div className='navbar-end'>
-                        <NavLink targetId='skills' active={ this.state.activeSection == 'intro' }>
+                        <NavLink targetId='intro' active={ this.state.activeSection == 'intro' }>
                             <span className='binary-display'>00</span> Intro
                         </NavLink>
                         <NavLink targetId='about' active={this.state.activeSection == 'about'}>
                             <span className='binary-display'>01</span> About
                         </NavLink>
-                        <NavLink targetId='experience' active={ this.state.activeSection == 'experience' }>
-                            <span className='binary-display'>10</span> Experience
-                        </NavLink>
                         <NavLink targetId='contact' active={ this.state.activeSection == 'contact' }>
-                            <span className='binary-display'>11</span> Contact
+                            <span className='binary-display'>10</span> Contact
                         </NavLink>
                     </div>
                 </div>

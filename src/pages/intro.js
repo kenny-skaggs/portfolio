@@ -1,30 +1,58 @@
+import { AnimatePresence } from 'framer-motion';
 import React, { Component } from 'react';
 
 import Title from '../components/title';
 import Section from '../components/section';
+import Quote from '../components/quote';
 
 
 export default class extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            currentQuoteIndex: 0
+        };
+        this.quoteList = [
+            'Excellent work & communication.',
+            'Very thoughtful and a pleasure to work with.',
+            'Was a champion and completed everything in time.',
+            'Great communication, completed project as expected & provided helpful feedback!',
+            'Is awesome.',
+            'Went above and beyond.',
+            'Great!'
+        ];
+        setInterval(this.incrementQuote, 6000);
+    }
+
+    incrementQuote = () => {
+        const newIndex = this.state.currentQuoteIndex + 1;
+        if (newIndex === this.quoteList.length) {
+            this.setState({ currentQuoteIndex: 0 });
+        } else {
+            this.setState({ currentQuoteIndex: newIndex });
+        }
+    }
+
     render () {
+        const quoteText = this.quoteList[this.state.currentQuoteIndex];
+
         return (
             <Section id='intro'>
+                <h1 className='title is-3'>
+                    Hi, my name is 
+                </h1>
                 <h1 className='title is-1'>
                     Kenny Skaggs
                 </h1>
-                <h1 className='subtitle'>
-                    Telling computers what to do since 1998
-                </h1>
-                <p>
-                    Passionate software engineer looking for a full-time or part-time position doing complex and
-                    challenging work for a great cause.
-                </p>
-                <p>
-                    I'm detail oriented and great at debugging. Most of my skillset is in full stack
-                    development, but I'm a quick learner and am open to other fields. My main focus isn't
-                    so much on the process or what technologies I'm using. What I care about the most is
-                    that the work I'm doing is helping people: medical researchers, students and teachers,
-                    or office workers supporting the backbones of society.
-                </p>
+                <p>&nbsp;</p>
+                <div className='quote-box'>
+                    <i className="fas fa-quote-left"></i>
+                    <AnimatePresence>
+                        <Quote key={ this.state.currentQuoteIndex }>{ quoteText }</Quote>
+                    </AnimatePresence>
+                    <i className="fas fa-quote-right end-quote"></i>
+                </div>
+                <div className='quote-ref'>quotes mostly copied from my Upwork reviews</div>
             </Section>
         )
     }

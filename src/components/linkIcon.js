@@ -12,12 +12,16 @@ export default class extends Component {
 
     onHoverStart = () => {
         this.setState({ isHovered: true });
-        this.props.onHoverChanged(true);
+        if (window.innerWidth > 700) {
+            this.props.onHoverChanged(true);
+        }
     }
 
     onHoverEnd = () => {
         this.setState({ isHovered: false });
-        this.props.onHoverChanged(false);
+        if (window.innerWidth > 700) {
+            this.props.onHoverChanged(false);
+        }
     }
 
     render () {
@@ -47,11 +51,12 @@ export default class extends Component {
         }
 
         return (
-            <motion.div
+            <motion.a
                 className={`link-icon`}
                 onMouseEnter={this.onHoverStart}
                 onMouseLeave={this.onHoverEnd}
-                onClick={() => window.open(this.props.linkTarget)}
+                href={this.props.linkTarget}
+                target='_blank'
             >
                 <AnimatePresence>
                     <span className='icon is-large'>
@@ -59,7 +64,7 @@ export default class extends Component {
                     </span>
                     {detailDisplay}
                 </AnimatePresence>
-            </motion.div>
+            </motion.a>
         )
     }
 }

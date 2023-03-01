@@ -10,6 +10,7 @@ $text: $off-white
 $text-strong: $off-white
 $link-hover: $off-white
 $link-focus: $off-white
+$link: $off-white
 $tag-background-color: $bright-other
 $tag-color: black
 
@@ -25,8 +26,8 @@ body
     font-family: 'Titillium Web', sans-serif
 
 .container
-    padding-left: 10vw
-    padding-right: 10vw
+    padding-left: 15vw
+    padding-right: 15vw
 
 .icon-display
     position: fixed
@@ -137,3 +138,29 @@ p
     background-size: cover
     width: 0.9em
     height: 0.9em
+
+.title.is-1
+    font-size: 5em
+
+.quote-box
+    display: flex
+    justify-content: space-between
+    position: relative
+    font-size: 1.5em
+    height: 3em
+
+    .quote
+        position: absolute
+        top: 50%
+        left: 10%
+        right: 10%
+        transform: translate(0%, -50%)
+        text-align: center
+
+    .end-quote
+        align-self: flex-end
+
+.quote-ref
+    padding-top: 1em
+    text-align: right
+    color: $dark-other

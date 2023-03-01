@@ -9,10 +9,10 @@ export default class extends Component {
         return (
             <Section id='contact'>
                 <Title>
-                    <span className='binary-display'>11</span> Let's Talk!
+                    <span className='binary-display'>10</span> Let's Talk!
                 </Title>
                 <p>
-                    I am currently seeking new opportunities. Whether you have a full-time exmployee
+                    I am currently seeking new opportunities. Whether you have a full-time employee
                     or part-time contract postition you are looking to fill, feel free to reach out 
                     to talk more about how my skillset can help!
                 </p>
